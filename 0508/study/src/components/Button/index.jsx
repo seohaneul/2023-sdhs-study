@@ -1,12 +1,11 @@
 import * as S from './styled';
 
 function Button(props) {
-    return(
-        <>
-        <S.Button>{props.children}</S.Button>
-        {props.color}/{props.size}
-        </>
-        )
+  return (
+    <>
+      <S.Button {...props}>{props.children}</S.Button>
+    </>
+  );
 }
 
 export default Button;
