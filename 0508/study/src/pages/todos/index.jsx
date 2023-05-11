@@ -15,10 +15,10 @@ function Todos() {
     }
     setTodoName('');
     setTodos(prevState => [...prevState, 
-      {id: prevState.length, name: todoName}]);
+      {id: uuidv4(), name: todoName}]);
   }
 
-    
+
    
       const deleteTodo = id =>{
         const findIndex = todos.findIndex(v => v.id === id);
