@@ -9,10 +9,6 @@ function Todos() {
   const [todos, setTodos] = useState([]);
 
   const createTodo = () =>{
-    if(todoName === ""){
-      alert("To do를 입력해주세요.")
-      return;
-    }
     setTodoName('');
     setTodos(prevState => [...prevState, 
       {id: uuidv4(), name: todoName}]);

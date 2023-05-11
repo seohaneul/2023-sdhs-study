@@ -16,7 +16,7 @@ function CreateItemBox({value, onChange, createTodo}) {
       <div>
       <S.Input value={value} onKeyUp={handleKeyPress} placeholder='To do를 입력해주세요.' 
       onChange={handleInputValue}/>
-      <Button>등록</Button>
+      <Button onClick={createTodo} disabled={!value.trim()}>등록</Button>
       </div>
       <hr/>
     </S.InputBox>
