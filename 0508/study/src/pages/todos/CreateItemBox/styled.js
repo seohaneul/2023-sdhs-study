@@ -16,10 +16,7 @@ export const InputBox = styled.div`
     flex-shrink: 0;
     border-radius: 0%;
     cursor: pointer;
-    &:hover{
-      background: #676767;
-      color: #fff;
-    }
+   
   }
   >hr{
     border: 1px solid black;
