@@ -2,7 +2,7 @@ import * as S from './styled';
 import { v4 as uuidv4 } from 'uuid';
 import CreateItemBox from './CreateItemBox';
 import ItemList from './ItemList';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function Todos() {
   const [todoName, setTodoName] = useState('');
@@ -28,6 +28,26 @@ function Todos() {
           return tempArr
         })
       }
+
+      useEffect(() => {
+        try{
+          const parseTodos = JSON.parse(localStorage.getItem('todos'));
+          setTodos(parseTodos);
+        }catch(error){
+          console.log(error);
+        }
+      }, []);
+
+      useEffect(() => {
+        console.log('todos 저장');
+        try {
+          const stringifyTodos = JSON.stringify(todos);
+          localStorage.setItem('todos', stringifyTodos);
+        } catch (error) {
+          console.log(error);
+          
+        }
+      }, [todos]);
   
   return (
     <S.Container>
