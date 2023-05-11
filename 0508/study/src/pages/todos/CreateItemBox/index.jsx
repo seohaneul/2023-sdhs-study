@@ -6,6 +6,9 @@ function CreateItemBox({value, onChange, createTodo}) {
     onChange(e.target.value);
   };
   const handleKeyPress = e => {
+    if(value === ""){
+      return;
+    }
     if (e.code === 'Enter'){
       createTodo();
     }
