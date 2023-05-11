@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Button } from '../../../components/button/styled';
+import { Button } from '../../../components/Button/styled';
 
 export const InputBox = styled.div`
   display: flex;

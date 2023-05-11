@@ -1,4 +1,4 @@
-import Button from '../button';
+import Button from '../Button';
 import * as S from './styled';
 
 function Todo(props) {

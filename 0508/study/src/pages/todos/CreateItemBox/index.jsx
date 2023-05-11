@@ -1,5 +1,5 @@
 import * as S from './styled';
-import Button from '../../../components/button'
+import Button from '../../../components/Button'
 
 function CreateItemBox({value, onChange, createTodo}) {
   const handleInputValue = e =>{

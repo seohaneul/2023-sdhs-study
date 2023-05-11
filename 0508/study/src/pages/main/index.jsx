@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-import Button from '../../components/button';
+import Button from '../../components/Button';
 
 import * as S from './styled';
 
